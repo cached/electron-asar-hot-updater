@@ -7,7 +7,6 @@ const admZip = require('adm-zip')
 const fs = require('fs')
 const crypto = require('crypto')
 const semverDiff = require('semver-diff')
-const log = require('electron-log')
 
 // Yes, it's weird, but we need the trailing slash after the .asar
 // so we can read paths "inside" it, e.g. the package.json, where we look
@@ -87,7 +86,7 @@ var Updater = {
     }
 
     // Put it into a file
-    log.info('[ electron-asar-hot-updater ]', line)
+    console.log('[ electron-asar-hot-updater ]', line)
   },
 
   /**
