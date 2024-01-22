@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "adm-zip": "^0.4.11",
-    "electron-log": "^4.1.1",
+    "electron-log": "^5.0.3",
     "original-fs": "^1.0.0",
     "request": "^2.87.0",
     "request-progress": "^3.0.0",
