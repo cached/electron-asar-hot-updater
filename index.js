@@ -236,7 +236,7 @@ var Updater = {
                 try{
                   var buffer = FileSystem.readFileSync(updateFile)
                   var sha1 = Updater.sha1(buffer)
-                  if(sha1 !== update_sha1) {
+                  if(sha1.toLowerCase() !== update_sha1.toLowerCase()) {
                     Updater.log('Update failed! Sha1 code mismatch: Downloaded file: ' + sha1 + ' vs Update server response: ' + update_sha1)
                     Updater.end(5)
                     return false
@@ -278,7 +278,7 @@ var Updater = {
                 try{
                   var buffer = FileSystem.readFileSync(updateFile)
                   var sha1 = Updater.sha1(buffer)
-                  if(sha1 !== update_sha1) {
+                  if(sha1.toLowerCase() !== update_sha1.toLowerCase()) {
                     Updater.log('Update failed! Sha1 code mismatch: Downloaded file: ' + sha1 + ' vs Update server response: ' + update_sha1)
                     Updater.end(5)
                     return false
