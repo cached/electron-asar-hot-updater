@@ -217,7 +217,7 @@ var Updater = {
         },
         function (error, response, body) {
           if (error) {
-            return console.error('err')
+            return console.error('Error during download process', error)
           }
           var updateFile = AppPathFolder + UPDATE_FILE
           var contentType = response.headers['content-type']
